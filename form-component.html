@@ -47,10 +47,16 @@ Example:
     Polymer({
         is: 'form-component',
         properties: {
+            /**
+             * `passwordLabel` indicates the label of password input
+             */
             passwordLabel: {
                 type: String,
                 value: "Password"
             },
+            /**
+             * `passwordConfirmationLabel` indicates the label of password confirmation input
+             */
             passwordConfirmationLabel: {
                 type: String,
                 value: "Confirm your password"
@@ -59,20 +65,12 @@ Example:
         _submitForm: function(){
             var isProperlyConfirmed = this.$.password.value == this.$.passwordConfirmation.value;
             var isPasswordValid = isProperlyConfirmed && !this.$.password.invalid;
-            this._validatePasswordConfirmation(isProperlyConfirmed);
+            this.$.passwordConfirmation.invalid = !isProperlyConfirmed;
 
             if(isPasswordValid){
                 alert("Succescfully submitted form!")
             } else{
                 alert("Something gone wrong :(")
-            }
-        },
-
-        _validatePasswordConfirmation: function(isProperlyConfirmed){
-            if (isProperlyConfirmed){
-                this.$.passwordConfirmation.invalid = false;
-            }else{
-                this.$.passwordConfirmation.invalid = true;
             }
         },
 
