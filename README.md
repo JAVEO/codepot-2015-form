@@ -23,7 +23,7 @@ Add some inputs: form-component.html
 
         ...
 
-Define submit form:
+Define _submit_form():
     
     </dom-module>
         <script>
