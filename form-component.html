@@ -26,6 +26,7 @@ Example:
                          maxlength="32"
                          char-counter
                          autofocus
+                         required
                          auto-validate>
             </paper-input>
         </div>
@@ -57,7 +58,7 @@ Example:
         },
         _submitForm: function(){
             var isProperlyConfirmed = this.$.password.value == this.$.passwordConfirmation.value;
-            var isPasswordValid = isProperlyConfirmed && !this.$.password.invalid && this.$.password.value.length >= 8;
+            var isPasswordValid = isProperlyConfirmed && !this.$.password.invalid;
             this._validatePasswordConfirmation(isProperlyConfirmed);
 
             if(isPasswordValid){
