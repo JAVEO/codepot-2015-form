@@ -60,7 +60,7 @@ Use them:
              </paper-input>
         </div>
         <paper-button id="submit" 
-                      on-click="_submitForm" raised>
+                      on-tap="_submitForm" raised>
                          Submit!
         </paper-button>
     </template>
