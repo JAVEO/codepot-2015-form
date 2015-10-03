@@ -36,7 +36,12 @@ Define _submit_form():
         ...
             });
         </script>
-        
+
+LINKI DO SCIAGGNIECIA ELEMENTÓW:
+
+bower install --save PolymerElements/paper-button#^1.0.0
+PolymerElements/paper-input#^1.0.0
+
 Get necessary components:
  
     <link rel="import" href="../paper-button/paper-button.html">
